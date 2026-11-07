@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.jpg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="g-style.css">
+    <title>Generator®</title>
+</head>
+<body>
+   <div class="wrapper">
+    <header>
+        <h1>Generate QR</h1>
+        <p>----------------</p>
+    </header>
+    <div class="form">
+        <input type="text" placeholder="Type Link here..." name="generator">
+        <button for="Qr">Generate QR Link</button>
+        <br>
+        <br>
+        <br>
+        <div class="qr-code">
+            <img src="../" alt="qr-code">
+        </div>
+    </div>
+    <div class="python">
+        <button for="print" id="print">PRINT</button>
+        <div class="popup_box">
+             <img src="./images/attention.png" alt="alert">
+            <br>
+            <br>
+            <br>
+            <h1>Print paper may reverse the short circurt ink injector</h1>
+            <label for="scema">Are you sure you want to proceed?</label>
+            <br>
+            <br>
+            <br>
+            <div class="btns">
+                <a href="#" class="btn1" id="cansole">Cancel</a>
+                <a href="#" class="btn2" onclick="window.print()" id="slip">Print</a>
+    </div>           
+    </div>
+    </div>
+    <div class="pricing">
+         <input type="text" placeholder="--TS®generator--" id="type-scrpt">
+    </div>    
+   </div> 
+   <script>
+    const Confirty = document.querySelector(".popup_box");
+    const Button = document.getElementById('print');
+    const Printer = document.getElementById('cansole');
+    const Sleep = document.getElementById('slip');
+
+let ogndo = 0;
+
+Button.addEventListener("click", ()=>{
+    Confirty.style.opacity = "1";   
+}),
+Printer.addEventListener("click", ()=>{
+    Confirty.style.opacity = "0";
+}),
+Sleep.addEventListener("click", ()=>{
+    Confirty.style.display = "none";
+});
+   </script> 
+<script src="./g-script.js"></script> 
+</body>
+</html>

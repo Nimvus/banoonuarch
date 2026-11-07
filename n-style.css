@@ -1,0 +1,282 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'poppins', sans-serif;
+    box-sizing: content-box;
+
+}
+body{
+    background-color: #060722;
+    color: #eee;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container .header{
+    width: 100%;
+    margin: 2% auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.container .header .logo{
+    width: 120px;
+    height: 74px;
+    background: url(./Images/pic-[1].png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+p{
+    color: #050326;
+
+}
+.container .header .nav ul{
+    display: flex;
+    gap: 30px;
+}
+.container .header .nav ul li{
+    font-size: 14px;
+    font-weight: 500;
+    list-style: none;
+    letter-spacing: 1px;
+}
+.container .header .nav ul li a{
+    padding: 10px;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer
+    ;
+    color: #3a6a5a;
+}
+.container .header .nav ul li a:hover{
+    border-bottom: 2px solid #3a9;
+}
+.container .header .buttons{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+
+}
+.container .header .buttons button {
+    width: 120px;
+    height: 40px;
+    border-radius: 32px 0;
+    border: none;
+    outline: none;
+    cursor: pointer
+    ;
+    font-weight: 500;
+    color: #242b2e;
+    background-image: linear-gradient(to right, #3a6a5a 20%, #3a9 80%);
+}
+button a{
+    text-decoration: none;
+    color: #000;
+    background-image: linear-gradient(to right, #3a6a5a 20%, #3a9 80%);
+    border-radius: 32px;
+    font-weight: 200;
+    font-size: 16px;
+}
+.container .header .buttons button :hover{
+    color: #eeee;
+    background-image: linear-gradient(to right, #3a6a5a 20%, #3a9 80%);
+
+}
+.container .main_content{
+    width: 100%;
+    display: flex;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    padding: 30px;
+}
+.container .main_content .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: blue;
+}
+.container .main_content .content h1{
+    font-size: 52px;
+    letter-spacing: 2rem;
+
+}.container .main_content .content span{
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+.container .main_content .content p{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: blue;
+}
+.main_content .company_img{
+    width: 90%;
+    height: 400px;
+    background: url(./Images/pic-[2].gif);
+    background-repeat: no-repeat;
+    background-size: 47vmax;
+    border-radius: 47px 0 32px;
+    margin-left: 17%;
+   
+
+}.company_img a label{
+    position: absolute;
+    display: none;
+    flex-direction: row;
+    border: none;
+    text-align: center;
+    outline: none;
+    border-radius: 32px 0;
+    overflow: visible;
+    background: none;
+    left: 70%;
+    transform: translateY(300px);
+    font-size: 27px;
+    text-decoration: none;
+    font-family: 'Tw Cen MT';
+    color: darkblue;
+    transform-style: preserve-3d;
+
+
+}.company_img a label:hover{
+    display: none;
+    color: red;
+    cursor: pointer;
+    background: linear-gradient(125deg, transparent,transparent,cornflowerblue,transparent, transparent, crimson, transparent,transparent);
+    animation: animate 5s infinite;
+    background-size: 400%;
+    border: 1px solid transparent;
+    transform-style: preserve-3d;
+    font-family: 'Tw Cen MT';
+}
+@keyframes animate{
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+	    
+.features p::before{
+    display: none;
+}
+.features p:hover{
+    color:  #fff;
+}
+.container .features{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.container .features .injector,.xdrive,.pro,.vcard{
+    width: 100px;
+    height: 50px;
+    padding: 4px;
+    margin: 25px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    top: 95%;
+}
+.container .features .injector img,.xdrive img,.pro img,.vcard img{
+     width: 150px;
+     height: 80px;
+     padding: 3px;
+     border-radius: 5px;
+
+     
+}.features .injector:hover,.xdrive:hover,.pro:hover,.vcard:hover{
+    color: #eee;
+    background: #eee;
+    background-image: linear-gradient(to right, #3a6a5a 20%, #3a9 80%);
+    font-weight: 600;
+    width: 20%;
+    height: 20%;
+    overflow: visible;
+    border-radius: 32px 0;
+    
+
+
+    
+}
+.features .injector{
+    position: absolute;
+    display:  flex;
+    transform: translateX(-500px);
+    top: 98%;
+}
+.features .xdrive{
+    position: absolute;
+    display:  flex;
+    transform: translateX(-200px);
+    top: 94%;
+}.features .pro{
+    position: absolute;
+    display:  flex;
+    transform: translateX(150px);
+    top: 94%;
+}
+.features .vcard{
+    position: absolute;
+    display:  flex;
+    transform: translateX(450px);
+    top: 94%;
+}
+.nim img{
+    display: flex;
+    position: absolute;
+    height: 32px;
+    top: 120%;
+    transform: translateX(1090px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 136%;
+}
+.insurance img{
+    display: flex;
+    position: absolute;
+    height: 120px;
+    transform: translateX(0px);
+    top: 130%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.company_img a label bdi{
+    position: absolute;
+    display: flex;
+    opacity: 1%;
+    flex-direction: row;
+    border: none;
+    text-align: center;
+    outline: none;
+    border-radius: 32px 0;
+    overflow: visible;
+    background: none;
+    left: -90px;
+    transform: translateY(-220px);
+    font-size: 67px;
+    text-decoration: none;
+    font-family: 'Tw Cen MT';
+    color: darkblue;
+    transform-style: preserve-3d;
+
+
+}

@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; 
+}
+ body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 39px;
+    background: #1E293B;
+    background-image: radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.15)0%, transparent 35%), radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 35%), radial-gradient(circle at 50% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 40%);
+ }.wrapper {
+    max-width: 1100px;
+    width: 500%;
+    position: relative;
+ }.wrapper i {
+    height: 50px;
+    width: 50px;
+    background: #ffff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 1.31rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  
+ }
+ .wrapper i:first-child {
+    left: -22px;
+ }
+ .wrapper i:last-child {
+    right: -32px;
+ }
+ .wrapper .carousel{
+    display: grid;
+    grid-auto-flow:  column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+ }.carousel :where(.card, .img) {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    object-fit: contain;
+
+ }
+ .carousel.dragging .card {
+    cursor:  grab;
+    user-select: none;
+ }
+ .carousel .card {
+    height: 342px;
+    list-style: none;
+    background: linear-gradient(145deg, #D5A3FF 0%, #77A5F8 100%);;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+ }.card .img{
+    background: #eee;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-size: 60vmax;
+     object-fit: contain;
+ }
+.card .img img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    object-fit: contain;
+}
+.card h2 {
+    font-weight:  500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+    color: #141B2D;
+}
+.card span{
+    color:  #6a6d78;
+    font-size: 1.31rem;
+}
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-template-columns: calc((100% / 3) - 12px);
+    }
+}
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-template-columns: 100%;
+    }
+}

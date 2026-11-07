@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta name="description" content="https://nimvus.github.io/nimsecured/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage|#/Nimvus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <!-- Corrected link tag -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<script>
+    const nimvus= {
+  overlappingElements: Array.from(document.querySelectorAll('*'))
+    .filter(el => {
+      const rect = el.getBoundingClientRect();
+      const button = document.getElementById('with');
+      if (!button) return false;
+      const buttonRect = button.getBoundingClientRect();
+      return (
+        el !== button &&
+        rect.left < buttonRect.right &&
+        rect.right > buttonRect.left &&
+        rect.top < buttonRect.bottom &&
+        rect.bottom > buttonRect.top
+      );
+    })
+    .map(el => ({
+      tagName: el.tagName,
+      id: el.id,
+      className: el.className,
+      zIndex: window.getComputedStyle(el).zIndex,
+      opacity: window.getComputedStyle(el).opacity,
+      backgroundColor: window.getComputedStyle(el).backgroundColor
+    }))
+};
+    </script>
+<body>
+ <div class="clock-ex" id="digit">
+            <div class="clock">
+                <div class="display">
+                    <div id="time"></div>
+                </div>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="calender" id="car">
+       <span id="datetime"></span>        
+    </div>
+    <form action="login.php" method="post">
+    <div class="label-login dark-theme" id="login" autocomplete >
+        <span>
+            <h1><input type="text" placeholder="Username" name="user" require></h1>
+            <h2><input type="password" placeholder="Password" name="pass" require></h2>
+    <div id="g_id_onload"
+         data-client_id="YOUR_GOOGLE_CLIENT_ID"
+         data-login_uri="https://your.domain/login"
+         data-auto_prompt="false">
+    </div>
+    <div class="g_id_signin"
+         data-type="standard"
+         data-size="large"
+         data-theme="outline"
+         data-text="sign_in_with"
+         data-shape="rectangular"
+         data-logo_alignment="left" id="gbutton">
+    </div>
+            <p for="login">Login with Google</p>
+            <button type="button" id="signedin">Login</button>
+        </span>
+    </div>
+</form>
+        <div class="label-work" id="work" autocomplete>
+        <span>
+            <h1><input type="text" placeholder="Email" name="offmail" require></h1>
+            <h2><input type="text" placeholder="Username" name="users"  require></h2>
+            <h3><input type="password" placeholder="Password" name="passes" action></h3>
+            <h4><input type="password" placeholder="Repeat Password" name="repeat-password" action></h4>
+            <button type="button" id="registered" name="register">Register</button>
+        </span>
+        </div>
+<div class="wrapper">
+    <input type="radio" name="slider" id="tab-1" checked>
+    <input type="radio" name="slider" id="tab-2">
+    <input type="radio" name="slider" id="tab-3">
+    <header>
+    <label for="tab-1" class="tab-1">Basic</label>
+    <label for="tab-2" class="tab-2">Starndard</label>
+    <label for="tab-3" class="tab-3">Team</label>
+    <div class="slider"></div>
+        </header>
+        <div class="cards-area">
+           <div class="cards">
+            <div class="row" id="okay">
+                <div class="pricing-details">
+                    <span>24</span>
+                    <p>For beginner use</p>
+                </div>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i><span>200 GB Premium Bandwidth</span></li>
+                    <li><i class="fas fa-check"></i><span>FREE 50+ Installation Scripts wordPress Suppported</span></li>
+                    <li><i class="fas fa-check"></i><span>One FREE Domain Registration .com and .np extensions only</span></li>
+                    <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
+                </ul>
+            </div>
+            <div class="row row-1" id="panic">
+                <div class="pricing-details">
+                    <span>101</span>
+                    <p>For professional use</p>
+                </div>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i><span>320 GB Premium Bandwidth</span></li>
+                    <li><i class="fas fa-check"></i><span>FREE 170+ Installation Scripts wordPress Suppported</span></li>
+                    <li><i class="fas fa-check"></i><span>One FREE Domain Registration .za and .pnp / .en extensions only</span></li>
+                    <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
+                </ul>
+            </div>
+            <div class="row row-2" id="none">
+                <div class="pricing-details">
+                    <span>320</span>
+                    <p>For nimvus Team</p>
+                </div>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i><span>Unlimited Premium Bandwidth</span></li>
+                    <li><i class="fas fa-check"></i><span>FREE 50+ Installation Scripts wordPress Suppported</span></li>
+                    <li><i class="fas fa-check"></i><span>One FREE Domain Registration .com and .np extensions only</span></li>
+                    <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
+                </ul>
+            </div>
+           </div> 
+        </div>
+        <button id="iso">Buy iSO</button>
+       </div> 
+    <div class="container">
+        <header class="header">
+            <div class="logo-wrapper">
+                <div class="cookie-box">
+                    <script>
+                        async function getScriptContent() {
+  try {
+    const response = await fetch('nim-1-javascript.js');
+    const text = await response.text();
+    return text;
+  } catch (e) {
+    return "Could not fetch script content: " + e.message;
+  }
+}
+
+const data = {
+  scriptContent: await getScriptContent()
+};
+                    </script>
+                </div>
+                <div class="logo">
+                    <img src="./images/Screen-2.png" alt="nimvus-icon" >
+                </div>
+                <h1>Inspirational Quotes</h1>
+            </div>
+            <button class="theme-toggle">
+                <i id="theme" class="fa-solid fa-moon"></i>
+            </button>
+        </header>
+        <div class="main-content">
+            <form action="#" class="prompt-form">
+                <div class="prompt-container">
+                    <br>
+                    <br>
+                    <textarea name="text" id="write" class="prompt-input" placeholder="Nimvus Quotes for the day" required autofocus></textarea>
+                     <button type="button" class="prompt-btn">
+                 <i class="fa-solid fa-dice"></i>
+                    </button>
+                </div>
+                <div class="prompt-actions">
+                    <div class="select-wrapper" hidden>
+                        <select class="custom-select" id="model-select" required>
+                            <option selected disabled hidden>Select Model</option>
+                            <option value="black-forest-labs/FLUX.1-dev">FLUX.1-dev</option>
+                            <option value="black-forest-labs/FLUX.1-schnell">FLUX.1-schenell</option>
+                            <option value="stabilityai/stable-diffusion-xl-base-1.0">Stable Diffusion XL</option>
+                            <option value="runwaynl/stable-diffusion-v1-5">Stable Diffusion v1.5</option>
+                            <option value="prompthero/openjourney">Openjourney</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper" hidden>
+                        <select class="custom-select" id="count-select" required >
+                            <option value="" selected disabled hidden>Image Count</option>
+                            <option value="1">1 Image</option>
+                            <option value="2">2 Image</option>
+                            <option value="3">3 Image</option>
+                            <option value="4">4 Image</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper" hidden>
+                        <select class="custom-select" id="ratio-select" required hidden>
+                            <option value="" selected disabled hidden>Aspect Ratio</option>
+                            <option value="1/1">Square (1:1)</option>
+                            <option value="16/9">Landscape (16:9)</option>
+                            <option value="9/16">Potrait (9:16)</option>
+                        </select>
+                    </div>
+                    <button class="generate-btn" type="submit">
+                        <i class="fa-solid fa-wand-sparkles"></i>
+                        Generate
+                    </button>
+                </div>
+
+                <!--Result Gallery Grid-->
+                <div class="gallery-grid">
+                     <div class="img-card">
+                          <div class="status-container">
+                                <div class="spinner"></div>
+                      </div>
+                      <a href="./scream.html" aria-label="apps-x"><img src="./images/Apps.png" alt="">
+                      <div class="img-overlay">
+                        <button class="img-download-btn">
+                            <i id="worxus" class="fa-brands fa-github"></i>
+                        </button></a>
+                      </div>
+                    </div>
+                       <div class="img-card">
+                          <div class="status-container">
+                                <div class="spinner"></div>
+                      </div>
+                      <a href="./weather.html" aria-label="nim-x"><img src="./images/cloudyweather_cloud_inpart_day_wind_thunder_sunny_rain_darkness_nublad_1459.ico" alt="">
+                      <div class="img-overlay">
+                        <button class="img-download-btn">
+                           <i id="cloud" class="fa-solid fa-cloud"></i>
+                        </button></a>
+                      </div>
+                    </div>
+                       <div class="img-card">
+                          <div class="status-container">
+                                <div class="spinner"></div>
+                      </div>
+                       <a href="./zthna.html" aria-label="home-x"><img src="./images/Screen-2.png" alt="">
+                      <div class="img-overlay">
+                       <button class="img-download-btn">
+                            <i class="fa-solid fa-house"></i>
+                        </button></a>
+                      </div>
+                    </div>
+                       <div class="img-card">
+                          <div class="status-container">
+                                <div class="spinner"></div>
+                      </div>
+                       <a href="./nim.htm" aria-label="user-x"><img src="./images/Network.png" alt="">
+                      <div class="img-overlay">
+                       <button class="img-download-btn">
+                          <i id="signin" class="fa-solid fa-user"></i>
+                        </button></a>
+                      </div>
+                    </div>
+                    <div class="dock-dash">
+                    <div class="grid">
+                     <div class="img-card">
+                          <div class="status-container">
+                                <div class="spinner"></div>
+                      </div>
+                       <a href="./Apps/CartographicRoom/index.htm" aria-label="apps-x"><img src="./images/ChoreographicRoom.png" alt="">
+                      <div class="img-overlay">
+                       <button class="img-download-btn">
+                            <i class="fa-brands fa-github"></i>
+                        </button></a>
+                      </div>
+                    </div>
+                    <div class="img-card">
+                          <div class="status-container">
+                                <div class="spinner"></div>
+                      </div>
+                      <a href="./Apps/LibraryArch/Quit Headsets/index.html" aria-label="apps-x"><img src="./images/LibraryArch.png" alt="">
+                      <div class="img-overlay">
+                        <button class="img-download-btn">
+                            <i class="fa-brands fa-github"></i>
+                        </button></a>
+                      </div>
+                    </div>
+                    <div class="img-card">
+                          <div class="status-container">
+                                <div class="spinner"></div>
+                      </div>
+                     <a href="./Apps/connector-store/Connect-Registry-Store V.1.7.0/New AXTL/Insertcc.html" aria-label="apps-x"><img src="./images/LightingRoom.png" alt="">
+                      <div class="img-overlay">
+                        <button class="img-download-btn">
+                            <i class="fa-brands fa-github"></i>
+                        </button></a>
+                      </div>
+                    </div>
+        <div class="increment" tittle="Clock" updateName(this)>
+        <div class="center-nut"></div>
+        <div class="center-nut2"></div>
+        <div class="indicators">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="sec-hand">
+            <div class="sec"></div>
+        </div>
+        <div class="min-hand">
+            <div class="min"></div>
+        </div>
+        <div class="hr-hand">
+            <div class="hr"></div>
+        </div>
+    </div></a>
+    <script>
+        const sec = document.querySelector(".sec");
+        const min = document.querySelector(".min");
+        const hr = document.querySelector(".hr");
+        setInterval(function(){
+           let time = new Date();
+           let secs = time.getSeconds() * 6;
+           let mins = time.getMinutes() * 6;
+           let hrs = time.getHours() * 30;
+
+           sec.style.transform = `rotateZ(${secs}deg)`;
+           min.style.transform = `rotateZ(${mins}deg)`;
+           hr.style.transform = `rotateZ(${hrs+(mins/12)}deg)`;
+        });
+    </script>
+    <div class="img-card">
+        <div class="status-container">
+                                <div class="spinner"></div>
+                      </div>
+                      <a href="./Apps/memmory card game/index.html" aria-label="apps-x"><img src="./images/_nimvus-Apps.png" alt="">
+                      <div class="img-overlay">
+                        <button class="img-download-btn">
+                            <i class="fa-brands fa-github"></i>
+                        </button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+            </form>
+        </div>
+    </div>
+
+    <script src="./nim-1-javascript.js"></script>
+</body>
+</html>
